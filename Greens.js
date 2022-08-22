@@ -5,31 +5,28 @@ fetch('http://localhost:5000/products')
 .then(function(products) {
  console.log(products);
 
-let myProducts = document.getElementById('products')
-products.forEach(i => {
+let theProducts = document.getElementById('products')
+products.forEach(k => {
     let productsList = document.createElement('li')
-    productsList.innerText = `${i.name}`
-    myProducts.appendChild(productsList)
-})
+    productsList.innerText = `${k.name}`
+    theProducts.appendChild(productsList) }) 
 })
 .catch(function(error){
- console.log('error',error);
-});
+ console.log('error',error); });
 
 fetch('http://localhost:5000/products/fruits')
 .then(function(response) {
-    return response.json();
-})
+    return response.json(); })
 .then(function(fruits) {
  console.log(fruits);
 
-let myfruList = document.getElementById('fruList')
-fruits.forEach(i => {
+
+let thefruList = document.getElementById('fruList')
+fruits.forEach(k => {
     let fruList = document.createElement('li')
-    fruList.innerText = `${i.name}`
-    myfruList.appendChild(fruList)
-})
-})
+    fruList.innerText = `${k.name}`
+    thefruList.appendChild(fruList) })
+ })
 .catch(function(error){
  console.log('error',error);
 });
@@ -40,13 +37,15 @@ fetch('http://localhost:5000/products/vegetables')
 .then(function(vegetables) {
  console.log(vegetables);
 
-let myvegList = document.getElementById('vegList')
-vegetables.forEach(i => {
+
+
+
+let thevegList = document.getElementById('vegList')
+vegetables.forEach(k => {
     let vegList = document.createElement('li')
-    vegList.innerText = `${i.name}`
-    myvegList.appendChild(vegList)
-})
-})
+    vegList.innerText = `${k.name}`
+    thevegList.appendChild(vegList) })
+ })
 .catch(function(error){
  console.log('error',error);
 });
